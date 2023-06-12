@@ -13,7 +13,7 @@ public class Academia {
     }
 
     public void calcularMensalidade(Pessoa pessoa) {
-        if (pessoa.isMulher()) {
+        if (pessoa.getSexo().equalsIgnoreCase("F")) {
             calcularMensalidadeMulher(pessoa);
         } else {
             calcularMensalidadeHomem(pessoa);
@@ -67,13 +67,10 @@ public class Academia {
     }
 
     public void mensagem() {
-        if (getMensalidade() > 0) {
-            System.out.println("Valor da mensalidade: R$" + getMensalidade());
-        } 
-        else {
+        if (mensalidade > 0) {
+            System.out.println("Valor da mensalidade: R$" + mensalidade);
+        } else {
             System.out.println("Sexo inválido.");
         }
     }
-
-    
 }
