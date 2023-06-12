@@ -65,4 +65,15 @@ public class Academia {
     public void setFaixaEtaria(int faixaEtaria) {
         this.faixaEtaria = faixaEtaria;
     }
+
+    public void mensagem() {
+        if (getMensalidade() > 0) {
+            System.out.println("Valor da mensalidade: R$" + getMensalidade());
+        } 
+        else {
+            System.out.println("Sexo inválido.");
+        }
+    }
+
+    
 }
