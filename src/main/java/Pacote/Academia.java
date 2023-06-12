@@ -15,23 +15,32 @@ public class Academia {
     public void calcularMensalidade(Pessoa pessoa) {
         if (pessoa.getSexo().equalsIgnoreCase("F")) {
             calcularMensalidadeMulher(pessoa);
-        } else {
+        } 
+        else if (pessoa.getSexo().equalsIgnoreCase("M"))  {
             calcularMensalidadeHomem(pessoa);
+        }
+        else {
+        	System.out.println("Sexo Inválido!!");
         }
     }
 
     private void calcularMensalidadeHomem(Pessoa pessoa) {
         if (pessoa.getIdade() <= 15) {
             mensalidade = 60.0;
-        } else if (pessoa.getIdade() <= 18) {
+        } 
+        else if (pessoa.getIdade() <= 18) {
             mensalidade = 75.0;
-        } else if (pessoa.getIdade() <= 30) {
+        } 
+        else if (pessoa.getIdade() <= 30) {
             mensalidade = 90.0;
-        } else if (pessoa.getIdade() <= 40) {
+        } 
+        else if (pessoa.getIdade() <= 40) {
             mensalidade = 85.0;
-        } else if (pessoa.getIdade() <= 50) {
+        } 
+        else if (pessoa.getIdade() <= 50) {
             mensalidade = 80.0;
-        } else {
+        } 
+        else if (pessoa.getIdade() <= 100) {
             mensalidade = 60.0;
         }
     }
@@ -39,13 +48,17 @@ public class Academia {
     private void calcularMensalidadeMulher(Pessoa pessoa) {
         if (pessoa.getIdade() <= 18) {
             mensalidade = 60.0;
-        } else if (pessoa.getIdade() <= 25) {
+        } 
+        else if (pessoa.getIdade() <= 25) {
             mensalidade = 90.0;
-        } else if (pessoa.getIdade() <= 40) {
+        } 
+        else if (pessoa.getIdade() <= 40) {
             mensalidade = 85.0;
-        } else if (pessoa.getIdade() <= 50) {
+        } 
+        else if (pessoa.getIdade() <= 50) {
             mensalidade = 65.0;
-        } else {
+        } 
+        else if (pessoa.getIdade() <= 100) {
             mensalidade = 50.0;
         }
     }
@@ -70,7 +83,7 @@ public class Academia {
         if (mensalidade > 0) {
             System.out.println("Valor da mensalidade: R$" + mensalidade);
         } else {
-            System.out.println("Sexo inválido.");
+            System.out.println("Tente novamente.");
         }
     }
 }

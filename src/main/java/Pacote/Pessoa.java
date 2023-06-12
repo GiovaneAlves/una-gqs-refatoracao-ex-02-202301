@@ -15,17 +15,13 @@ public class Pessoa {
         this.idade = idade;
         this.nome = nome;
     }
-
-    public boolean isMulher() {
-        return sexo.equalsIgnoreCase("F");
-    }
-
+ 
     public String getSexo() {
         return sexo;
     }
 
     public void setSexo(Scanner scanner) {
-        this.sexo = scanner.next();;
+        this.sexo = scanner.next().toUpperCase();;
     }
 
     public int getIdade() {
