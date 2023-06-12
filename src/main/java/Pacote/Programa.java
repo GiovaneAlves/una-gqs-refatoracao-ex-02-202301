@@ -8,20 +8,16 @@ public class Programa {
         Pessoa pessoa = new Pessoa();
 
         System.out.print("Informe a idade do cliente: ");
-        int idade = scanner.nextInt();
-        pessoa.setIdade(idade);
+        pessoa.setIdade(scanner);
 
         System.out.print("Informe o sexo do cliente (M/F): ");
-        String sexo = scanner.next();
-        pessoa.setSexo(sexo);
+        pessoa.setSexo(scanner);
 
         Academia academia = new Academia();
         academia.calcularMensalidade(pessoa);
 
-        double mensalidade = academia.getMensalidade();
-
-        if (mensalidade > 0) {
-            System.out.println("Valor da mensalidade: R$" + mensalidade);
+        if (academia.getMensalidade() > 0) {
+            System.out.println("Valor da mensalidade: R$" + academia.getMensalidade());
         } else {
             System.out.println("Sexo inválido.");
         }

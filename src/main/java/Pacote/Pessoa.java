@@ -1,5 +1,7 @@
 package Pacote;
 
+import java.util.Scanner;
+
 public class Pessoa {
     private String sexo;
     private int idade;
@@ -22,24 +24,24 @@ public class Pessoa {
         return sexo;
     }
 
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
+    public void setSexo(Scanner scanner) {
+        this.sexo = scanner.next();;
     }
 
     public int getIdade() {
         return idade;
     }
 
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setIdade(Scanner scanner) {
+        this.idade = scanner.nextInt();;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNome(Scanner scanner) {
+        this.nome = scanner.next();;
     }
 }
 
